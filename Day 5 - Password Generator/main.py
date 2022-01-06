@@ -27,10 +27,7 @@ print("Easy Level Password: " + easy_pass)
 #Hard Level - Order of characters randomised:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
 
-def splitString(word):
-    return [char for char in word]
-
-easy_pass_list = splitString(easy_pass)
+easy_pass_list = list(easy_pass)
 random.shuffle(easy_pass_list)
 hard_pass = ""
 
