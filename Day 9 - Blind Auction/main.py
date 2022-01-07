@@ -6,30 +6,25 @@ print(logo)
 
 print("Welcome to the Secret Auction Program.")
 
-auction = []
+bidding = {}
 
-while True:
-    bidding = {}
+while True:    
     name = input("What is your name?\n")
     bid = float(input("What is your bid amount (in $)?\n"))
-
-    bidding["name"] = name
-    bidding["bid_amount"] = bid
-
-    auction.append(bidding)
-
+    bidding[name] = bid
     choice = input("Are there any other bidders? Type 'yes' or 'no'.\n")
     if choice == "no":
+        clear()
         break
     elif choice == "yes":
         clear()
-        continue
 
-winner = {"name": "", "max_bid": -1}
+name=""
+winner = {name: -1}
 
-for bids in auction:
-    if bids["bid_amount"] > winner["max_bid"]:
-        winner["max_bid"] = bids["bid_amount"]
-        winner["name"] = bids["name"]
+for bidder in bidding:
+    if bidding[bidder] > winner[name]:
+        name = bidder
+        winner[name] = bidding[bidder]
 
-print(f"The winner is {winner['name']} with a bid of ${winner['max_bid']}")
+print(f"The winner is {name} with a bid of ${winner[name]}")
