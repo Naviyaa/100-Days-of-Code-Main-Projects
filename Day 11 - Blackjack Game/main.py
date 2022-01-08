@@ -29,23 +29,19 @@ def compare_score(list1, list2):
     diff1 = 21 - calculate_score(list1)
     diff2 = 21 - calculate_score(list2)
 
-    if abs(diff1) < abs(diff2):
+    if diff1 < diff2:
         if diff1 >= 0:
             return 1
         else:
             return 0
     
-    elif abs(diff1) == abs(diff2):
-        if (diff1 >= 0 and diff2 >= 0) or (diff1 < 0 and diff2 < 0):
-            return 2
-        elif diff1 < 0 and diff2 >= 0:
-            return 0
-        elif diff1 >= 0 and diff2 < 0:
-            return 1
+    elif diff1 == diff2:
+        return 2
+
     else:
-        if (diff1 >= 0 and diff2 >= 0) or (diff1 < 0 and diff2 >= 0):
+        if diff2 >= 0:
             return 0
-        elif (diff1 >= 0 and diff2 < 0) or (diff1 < 0 and diff2 < 0):
+        else:
             return 1
 
 
