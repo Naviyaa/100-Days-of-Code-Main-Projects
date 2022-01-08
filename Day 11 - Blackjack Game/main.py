@@ -16,7 +16,8 @@ def calculate_score(cards_list):
 
 def conditions(user, dealer, cards):
     if calculate_score(dealer) < 17:
-        dealer.append(deal_cards(cards))
+        while calculate_score(dealer) < 17:
+            dealer.append(deal_cards(cards))
 
     if 11 in user and calculate_score(user) > 21:
         user[user.index(11)] = 1
