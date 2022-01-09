@@ -14,3 +14,4 @@
  * Day 9 - Blind Auction
  * Day 10 - Calculator
  * Day 11 - Blackjack Game (Capstone Project 1)
+ * Day 12 - Guess the Number Game
