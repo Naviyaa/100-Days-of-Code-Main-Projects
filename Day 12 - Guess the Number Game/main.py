@@ -47,6 +47,7 @@ def guess_game():
         turns = check(guess, num, turns)
         if turns == 0:
             print("You have run out of turns...Game Over!")
+            print(f"...The answer was {num}")
             break
         elif guess != num:
             print("Guess again!")
