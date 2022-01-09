@@ -16,3 +16,4 @@
  * Day 11 - Blackjack Game (Capstone Project 1)
  * Day 12 - Guess the Number Game
  * Day 13 - Debugging
+ * Day 14 - Higher-Lower Game
